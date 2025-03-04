@@ -6,7 +6,7 @@ if (number>0&&Number.isInteger(number)) {
        boi+= i + ",";   
     }
     }
-    boi = boi.slice(0,-2);
+    boi = boi.slice(0,-1);
     console.log("cac so chia het cho 5 tu 1 den N la:",boi );
 }else{
     console.log("du lieu khong hop le");
