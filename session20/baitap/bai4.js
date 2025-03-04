@@ -1,8 +1,23 @@
-let str = prompt("xin moi ban nhap chuoi")
-let char = prompt("xin moi ban nhap ki tu can tim kiem")
-if(str.indexOf(`${char}`) == 0){
-    alert(`ton tai tu can tim kiem`)
-}else{
-    alert(`khong ton tai tu can tim kiem`)
+let string = prompt("Mời nhập chuỗi");
+let search = prompt("Mời nhập từ cần tìm kiếm");
+let found = false;
+
+for (let i = 0; i <= string.length - search.length; i++) {
+    let match = true;
+    for (let j = 0; j < search.length; j++) {
+        if(string[i+j] !== search[j]){
+            match = false;
+            break;
+        }
+    }
+    if(match){
+        found = true;
+        break;
+    }
 }
-console.log(char.indexOf())
+
+if(found){
+    alert('Tồn tại từ khóa tìm kiêm');
+}else{
+    alert('Không tồn tại từ khóa tìm kiếm');
+}
